@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1716,1597</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1716,1637</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>PDF_ReadVendor_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="22">
@@ -35,7 +35,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="18">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="36">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -54,6 +54,8 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="PDF_ReadVendor" sap:VirtualizedContainerService.HintSize="1696,1537" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -82,11 +84,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">430,183.666666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">530,234.666666666667 529.333333333333,234.666666666667 529.333333333333,256.666666666667</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <upap:ExtractImagesFromPDF DisplayName="Extract Images From PDF" FileName="[in_pdfFilePath]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ExtractImagesFromPDF_1" OutputFolderName="[tempFolder]">
+      <upap:ExtractImagesFromPDF DisplayName="Extract Images From PDF" FileName="[in_pdfFilePath]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExtractImagesFromPDF_1" OutputFolderName="[tempFolder]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -94,12 +96,12 @@
         </sap:WorkflowViewStateService.ViewState>
       </upap:ExtractImagesFromPDF>
       <FlowStep.Next>
-        <FlowDecision x:Name="__ReferenceID1" Condition="[Directory.GetFiles(tempFolder).Length &lt;&gt;0]" DisplayName="Image Exsits" sap:VirtualizedContainerService.HintSize="71,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+        <FlowDecision x:Name="__ReferenceID1" Condition="[Directory.GetFiles(tempFolder).Length &lt;&gt;0]" DisplayName="Image Exsits" sap:VirtualizedContainerService.HintSize="70,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <av:Point x:Key="ShapeLocation">494.333333333333,256.666666666667</av:Point>
-              <av:Size x:Key="ShapeSize">71,87</av:Size>
+              <av:Size x:Key="ShapeSize">70,87</av:Size>
               <av:PointCollection x:Key="TrueConnector">494.333333333333,300.166666666667 464.333333333333,300.166666666667 464.333333333333,279.166666666667 364.666666666667,279.166666666667</av:PointCollection>
               <av:PointCollection x:Key="FalseConnector">564.333333333333,300.166666666667 997.2,300.166666666667 997.2,315.200913919771</av:PointCollection>
             </scg:Dictionary>
@@ -109,11 +111,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">134.666666666667,248.666666666667</av:Point>
-                  <av:Size x:Key="ShapeSize">230,62</av:Size>
+                  <av:Size x:Key="ShapeSize">230,61</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">249.666666666667,309.666666666667 249.666666666667,339.666666666667 380,339.666666666667 380,359</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,62" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Image extracted">
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="230,61" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="Image extracted">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,29 +149,29 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">280,474.5</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
+                          <av:Size x:Key="ShapeSize">200,51</av:Size>
                           <av:PointCollection x:Key="ConnectorLocation">380,525.5 380,599</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[imagefilepath]">
+                      <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="767,1081" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[imagefilepath]">
                         <ui:ForEach.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="item" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="731,952" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="731,947" sap2010:WorkflowViewState.IdRef="Sequence_3">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="689,860" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Directory.GetFiles(&quot;VendorImage&quot;)]">
+                              <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="689,855" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Directory.GetFiles(&quot;VendorImage&quot;)]">
                                 <ui:ForEach.Body>
                                   <ActivityAction x:TypeArguments="x:Object">
                                     <ActivityAction.Argument>
                                       <DelegateInArgument x:TypeArguments="x:Object" Name="file" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,725" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="653,721" sap2010:WorkflowViewState.IdRef="Sequence_2">
                                       <Sequence.Variables>
                                         <Variable x:TypeArguments="x:Boolean" Name="ismatched" />
                                       </Sequence.Variables>
@@ -179,10 +181,10 @@
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
                                       <uia:CompareImagesPixelByPixelActivity ComparisonResult="[ismatched]" DisplayName="Compare Two Image Files Pixel By Pixel" FirstImageFilePath="[item.ToString]" sap:VirtualizedContainerService.HintSize="611,87" sap2010:WorkflowViewState.IdRef="CompareImagesPixelByPixelActivity_6" SecondImageFilePath="[file.ToString]" />
-                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="611,62" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[ismatched.ToString]" />
-                                      <If Condition="[ismatched]" sap:VirtualizedContainerService.HintSize="611,404" sap2010:WorkflowViewState.IdRef="If_1">
+                                      <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="611,61" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[ismatched.ToString]" />
+                                      <If Condition="[ismatched]" sap:VirtualizedContainerService.HintSize="611,401" sap2010:WorkflowViewState.IdRef="If_1">
                                         <If.Then>
-                                          <Sequence sap:VirtualizedContainerService.HintSize="304,254" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                          <Sequence sap:VirtualizedContainerService.HintSize="304,253" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -193,10 +195,10 @@
                                                 <OutArgument x:TypeArguments="x:String">[out_Vendor]</OutArgument>
                                               </Assign.To>
                                               <Assign.Value>
-                                                <InArgument x:TypeArguments="x:String">[path.GetFileName(file.ToString).ToString]</InArgument>
+                                                <InArgument x:TypeArguments="x:String">[path.GetFileName(file.ToString).split("."c)(0).ToString]</InArgument>
                                               </Assign.Value>
                                             </Assign>
-                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,62" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[out_Vendor.ToString]" />
+                                            <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="262,61" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[out_Vendor.ToString]" />
                                           </Sequence>
                                         </If.Then>
                                         <If.Else>
@@ -252,11 +254,11 @@
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <av:Point x:Key="ShapeLocation">897.2,315.200913919771</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
+                  <av:Size x:Key="ShapeSize">200,51</av:Size>
                   <av:PointCollection x:Key="ConnectorLocation">997.2,366.200913919771 997.2,396.200913919771 997,396.200913919771 997,397.500913919771</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[in_pdfFilePath]" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[str_Output]">
+              <ui:ReadPDFText PreserveFormatting="{x:Null}" DisplayName="Read PDF Text" FileName="[in_pdfFilePath]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[str_Output]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -376,11 +378,11 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">430,93.6666666666667</av:Point>
-          <av:Size x:Key="ShapeSize">200,52</av:Size>
+          <av:Size x:Key="ShapeSize">200,51</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">530,144.666666666667 530,183.666666666667</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Array.ForEach(Directory.GetFiles(path),Sub(x) File.Delete(x))" DisplayName="Clean temp logo folder" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode ContinueOnError="{x:Null}" Code="Array.ForEach(Directory.GetFiles(path),Sub(x) File.Delete(x))" DisplayName="Clean temp logo folder" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
         <ui:InvokeCode.Arguments>
           <InArgument x:TypeArguments="x:String" x:Key="path">[tempFolder]</InArgument>
         </ui:InvokeCode.Arguments>
